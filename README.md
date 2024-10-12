@@ -36,7 +36,9 @@ sudo nmap -sV < ip-адрес >
 
 Решение 1
 
-![alt text]()
+![alt text](https://github.com/ahmrust/network-protection/blob/main/img/2.png)
+![alt text](https://github.com/ahmrust/network-protection/blob/main/img/1.png)
+![alt text](https://github.com/ahmrust/network-protection/blob/main/img/3.png)
 
 ### Задание 2
 Проведите атаку на подбор пароля для службы SSH:
@@ -58,4 +60,5 @@ hydra -L users.txt -P pass.txt < ip-адрес > ssh
 
 Решение 2
 
-![alt text]()
+![alt text](https://github.com/ahmrust/network-protection/blob/main/img/4.png)
+![alt text](https://github.com/ahmrust/network-protection/blob/main/img/5.png)
