@@ -38,8 +38,10 @@ sudo nmap -sV < ip-адрес >
 
 ![alt text](https://github.com/ahmrust/network-protection/blob/main/img/2.png)
 ![alt text](https://github.com/ahmrust/network-protection/blob/main/img/1.png)
-![alt text](https://github.com/ahmrust/network-protection/blob/main/img/3.png)
+![alt text](https://github.com/ahmrust/network-protection/blob/main/img/4.png)
 
+Suricata определила подозрительное сканирование, кроме первого запроса -sA, и классифицировала как потенциально опасный траффик и возможность утечки информации.
+Fail2ban видимо заблокировал входящий траффик ранее.
 ### Задание 2
 Проведите атаку на подбор пароля для службы SSH:
 
@@ -60,5 +62,9 @@ hydra -L users.txt -P pass.txt < ip-адрес > ssh
 
 Решение 2
 
-![alt text](https://github.com/ahmrust/network-protection/blob/main/img/4.png)
+![alt text](https://github.com/ahmrust/network-protection/blob/main/img/3.png)
 ![alt text](https://github.com/ahmrust/network-protection/blob/main/img/5.png)
+Попытка подключения не удалась. В данном случае Suricata показывает постоянное сканирование ssh с классификацией возможности утечки информации.
+Лог-файл Fail2ban также показывает попытку подключения. Через некоторое время атакующая машина была разбанена. Но после попытки подобрать пароль, опять была заблокирована.
+
+
